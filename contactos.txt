@@ -1,0 +1,3 @@
+Tipo:Amigo,Nombre:Milton,Numero:2,Tipo:Amigo,facebook: Milton,años:4
+Tipo:Familiar,Nombre:Pedro,Numero:12,Tipo:Familiar,consaguinidad: hijo,parentesco:padre
+Tipo:Companero,Nombre:Josue,Numero:15,Tipo:Companero,clase: Filosofia,trabajo:si

@@ -125,7 +125,7 @@ int main(){
 				cout << "---TODOS LOS CONTACTOS---"<<endl;
 				for(int i = 0; i < contactos.size(); i++){
 				cout << contactos[i]->toString()<<endl;
-				cout << "pupu"<<endl;
+				
 				}
 			break;
 			}
