@@ -6,11 +6,14 @@
 #include "Amigo.h"
 #include "Familiar.h"
 #include "Companero.h"
+#include "Castigo.h"
 #include <fstream>
+void cargarArchivo();
 using namespace std;
 
 int main(){
-	vector<Contacto>contactos;
+	ofstream fichero;
+	vector<Contacto*>contactos;
 	string nombre;
 	int numero = 0;
 	string user;
@@ -19,6 +22,8 @@ int main(){
 	string parentesco;
 	string clase;
 	string respuesta;
+	string puntuacion;
+	string tecnica;
 	int opcion = 0;
 	char r = 's';
 	while(r == 's' || r=='S'){
@@ -47,7 +52,8 @@ int main(){
 						cout << "Ingrese el USERNAME: ";
 						cin >> user;
 						cout << endl;
-						
+						Amigo* a = new Amigo(nombre,numero,anios,user);
+						contactos.push_back(a); 
 						
 					break;
 					}
@@ -66,6 +72,9 @@ int main(){
                                                 cout << "Ingrese el grado de parentesco: ";
                                                 cin >> parentesco;
                                                 cout << endl;
+						Familiar* f = new Familiar(nombre,numero,consanguinidad,parentesco);
+						contactos.push_back(f);
+						
 				
 					break;
 					}
@@ -84,7 +93,27 @@ int main(){
                                                 cout << "Ingrese si trabajaria junto a esta persona: ";
                                                 cin >> respuesta;
                                                 cout << endl;
+						Companero* c = new Companero(nombre,numero,clase,respuesta);
+						contactos.push_back(c);
 
+					break;
+					}
+					case 4:{
+						cout <<"---CASTIGO---"<<endl;
+                                                cout << "Ingrese el nombre: ";
+                                                cin >> nombre;
+                                                cout << endl;
+                                                cout << "Ingrese el numero: ";
+                                                cin >> numero;
+                                                cout << endl;
+                                                cout << "Ingrese la puntuacion: ";
+                                                cin >> puntuacion;
+                                                cout << endl;
+                                                cout << "Ingrese la tecnica: ";
+                                                cin >> tecnica;
+                                                cout << endl;
+						Castigo* cast = new Castigo(nombre,numero,puntuacion,tecnica);
+						contactos.push_back(cast);
 					break;
 					}
 				}
@@ -93,16 +122,21 @@ int main(){
 			}
 			
 			case 2:{
+				cout << "---TODOS LOS CONTACTOS---"<<endl;
 				for(int i = 0; i < contactos.size(); i++){
-						
+				cout << contactos[i]->toString()<<endl;
+				cout << "pupu"<<endl;
 				}
 			break;
 			}
 
 			case 3:{
-				for(int i = 0;i < contactos.size(); i++){
-								
+				fichero.open("contactos.txt");
+				for(int i = 0;i < contactos.size(); i++){                               
+                                	fichero << contactos[i]->toString();
+                                	fichero << "\n";				
 				}
+				fichero.close();
 			
 			break;
 			}
@@ -112,6 +146,4 @@ int main(){
 		cin >> r;
 		cout << endl;
 	}
-
-
 }
