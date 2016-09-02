@@ -1,20 +1,17 @@
-obra: main.o pintura.o diseno.o escultura.o literatura.o obras.o
-	g++ main.o pintura.o diseno.o escultura.o literatura.o obras.o -o obra
+obra: main.o Amigo.o Familiar.o Companero.o Castigo.o obras.o
+	g++ main.o Amigo.o Familiar.o Companero.o Castigo.o obras.o -o obra
 
-main.o:	main.cpp obras.h literatura.h escultura.h diseno.h pintura.h 
+main.o:	main.cpp  Castigo.h Companero.h Familiar.h Amigo.h 
 	g++ -c main.cpp
 
-pintura.o:	pintura.cpp obras.h  pintura.h
-	g++ -c pintura.cpp
+Amigo.o:	Amigo.cpp   Amigo.h
+	g++ -c Amigo.cpp
 
-diseno.o:	diseno.cpp obras.h  diseno.h
-	g++ -c diseno.cpp
+Familiar.o:	Familiar.cpp   Familiar.h
+	g++ -c Familiar.cpp
 
-escultura.o:	escultura.cpp obras.h  escultura.h
-	g++ -c escultura.cpp
+Companero.o: Companero.cpp   Companero.h
+	g++ -c Companero.cpp
 
-literatura.o:	literatura.cpp obras.h  literatura.h
-	g++ -c literatura.cpp
-
-obras.o:	obras.cpp obras.h
-	g++ -c obras.cpp
+Castigo.o:	Castigo.cpp   Castigo.h
+	g++ -c Castigo.cpp

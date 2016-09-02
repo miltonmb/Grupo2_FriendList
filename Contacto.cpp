@@ -12,7 +12,7 @@ Contacto::~Contacto(){
 
 string Contacto::toString()const{
 	stringstream ss;
-	ss << "ONombre: " << nombre << ", Numero: " << numero;
+	ss << "Nombre: " << nombre << ", Numero: " << numero;
 	return ss.str();
 }
 
