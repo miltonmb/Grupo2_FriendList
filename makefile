@@ -1,5 +1,3 @@
-obra: main.o Amigo.o Familiar.o Companero.o Castigo.o obras.o
-	g++ main.o Amigo.o Familiar.o Companero.o Castigo.o obras.o -o obra
 
 main.o:	main.cpp  Castigo.h Companero.h Familiar.h Amigo.h 
 	g++ -c main.cpp
