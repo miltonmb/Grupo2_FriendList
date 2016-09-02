@@ -28,7 +28,7 @@ int main(){
 	char r = 's';
 	while(r == 's' || r=='S'){
 		cout << "---BIENVENIDO---"<<endl;
-		cout << "Menu:\n1.Agregar\n2.Listar\n3.Guardar y Salir"<<endl;
+		cout << "Menu:\n1.Agregar\n2.Listar\n3.Guardar"<<endl;
 		cin >> opcion;
 		switch(opcion){
 			case 1:{
