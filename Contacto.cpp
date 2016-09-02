@@ -4,7 +4,7 @@
 using std::string;
 using std::stringstream;
 
-Contacto::Contacto(string nombre, int numero, string tipo): nombre(nombre), numero(numero), tipo(tipo){
+Contacto::Contacto(string nombre, int numero): nombre(nombre), numero(numero){
 }
 
 Contacto::~Contacto(){
