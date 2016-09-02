@@ -7,7 +7,7 @@ class Familiar: public Contacto{
 	string consaguinidad;
 	string  parentesco;
   public:
-	Familiar(string,int,string, string,string);
+	Familiar(string,int, string,string);
 	virtual ~Familiar();
 	virtual string toString()const;
 };

@@ -5,8 +5,9 @@
 using std::string;
 using std::stringstream;
 
-Companero::Companero(string nombre, int numero, string tipo, string  clase, string trabajo):Contacto(nombre, numero, tipo),
+Companero::Companero(string nombre, int numero, string  clase, string trabajo):Contacto(nombre, numero),
 	clase(clase), trabajo(trabajo){
+	tipo="Companero";
 }
 
 Companero::~Companero(){

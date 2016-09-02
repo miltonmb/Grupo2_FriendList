@@ -5,8 +5,9 @@
 using std::string;
 using std::stringstream;
 
-Amigo::Amigo(string nombre, int numero, int years,string tipo, string nombref):Contacto(nombre, numero, tipo),
+Amigo::Amigo(string nombre, int numero, int years,string nombref):Contacto(nombre, numero),
 	nombref(nombref), years(years){
+	tipo = "Amigo";
 }
 
 Amigo::~Amigo(){

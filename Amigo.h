@@ -8,7 +8,7 @@ class Amigo: public Contacto{
 	int years;
 	string nombref;
   public:
-	Amigo(string,int,int,string, string);
+	Amigo(string,int,int, string);
 	virtual ~Amigo();
 	virtual string toString()const;
 };

@@ -5,9 +5,10 @@ class Contacto{
   private:
   	string nombre;
   	int numero;
-  	string tipo;
+  
   public:
-	Contacto(string,int,string);
+  	string tipo;
+	Contacto(string,int);
 	virtual ~Contacto();
 	virtual string toString()const;	
 };

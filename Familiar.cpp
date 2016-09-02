@@ -5,8 +5,9 @@
 using std::string;
 using std::stringstream;
 
-Familiar::Familiar(string nombre, int numero, string tipo, string  consaguinidad, string parentesco):Contacto(nombre, numero,tipo),
+Familiar::Familiar(string nombre, int numero, string  consaguinidad, string parentesco):Contacto(nombre, numero),
 	consaguinidad(consaguinidad), parentesco(parentesco){
+	tipo = "Familiar";
 }
 
 Familiar::~Familiar(){
