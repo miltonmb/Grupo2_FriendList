@@ -6,6 +6,7 @@
 #include "Amigo.h"
 #include "Familiar.h"
 #include "Companero.h"
+#include <fstream>
 using namespace std;
 
 int main(){
@@ -93,12 +94,15 @@ int main(){
 			
 			case 2:{
 				for(int i = 0; i < contactos.size(); i++){
-				
+						
 				}
 			break;
 			}
 
 			case 3:{
+				for(int i = 0;i < contactos.size(); i++){
+								
+				}
 			
 			break;
 			}
