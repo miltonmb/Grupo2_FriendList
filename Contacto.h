@@ -5,8 +5,9 @@ class Contacto{
   private:
   	string nombre;
   	int numero;
+  	string tipo;
   public:
-	Contacto(string,int);
+	Contacto(string,int,string);
 	virtual ~Contacto();
 	virtual string toString()const;	
 };
